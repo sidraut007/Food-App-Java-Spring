@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@400;500&display=swap'); */
+
+* {
+  font-family: 'Sora', sans-serif;
+  /* font-family: 'Poppins'; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(255, 58, 58);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: white;
+  background-color: rgb(255, 58, 58);
+}
+
+.container-add-employee {
+  margin-bottom: 50px;
+}
+
+.router-view {
+  overflow-y: auto; 
+  /* header je 100px a footer 30px*/
+  height: calc(100vh - 100px - 30px);
+  overflow-x: hidden;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.router-view::before{
+  display: block;
+  /* header je 100px a footer 30px*/
+  height: calc(100vh - 100px - 30px);
+  width: 100vw;
+  background-image: linear-gradient(rgba(255, 136, 164, 0.2), rgba(255, 136, 164, 0.2)), url('./images/backimage.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+a{
+  letter-spacing: 1px;
+}
+
+button{
+  font-weight: 500 !important;
+  letter-spacing: 1px;
+}
+
+.swal2-confirm.swal2-styled.swal2-default-outline{
+  background-color: #198754 !important; /* yes button na swal alertu, ne treba na ovaj nacin, ali radi okej. */
+}
+
+.swal2-title{
+  font-weight: 500 !important; /* bude po defaultu 600 izgleda sada iz nekog razloga, kao da je pre bio 500, pa sad stavljam da bude isto kao pre */
+}
+
+
+/********** SCROLL BAR START ************/
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  background: green;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(140, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: green;
+}
+
+/********** SCROLL BAR END ************/
