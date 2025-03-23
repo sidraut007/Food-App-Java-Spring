@@ -65,7 +65,7 @@
   #
   - Run Application Backend container
   ```bash
-  docker run -d -p 8080:8080 --name backend -e SPRING_DATASOURCE_USERNAME="root" -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql:3306/foodorderDB?createDatabaseIfNotExist=true" -e SPRING_DATASOURCE_PASSWORD="admin" --network bankapp sidraut007/food-backend
+  docker run -d -p 8080:8080 --name backend -e SPRING_DATASOURCE_USERNAME="root" -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql:3306/foodorderDB?createDatabaseIfNotExist=true" -e SPRING_DATASOURCE_PASSWORD="admin" --network foodapp sidraut007/food-backend
   ```
   #
   - Verify deployment
