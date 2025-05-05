@@ -48,12 +48,12 @@
   #
   - Create a docker network
   ```bash
-  docker network create Foodapp
+  docker network create foodapp
   ```
   #
   - Run MYSQL container
   ```bash
-  docker run -itd --name mysql -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=FoodDB --network=Foodapp mysql:5.7
+  docker run -itd --name mysql -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=FoodDB --network=foodapp mysql:5.7
 
   ```
   #
@@ -65,7 +65,7 @@
   #
   - Run Application Backend container
   ```bash
-  docker run -d -p 8080:8080 --name backend -e SPRING_DATASOURCE_USERNAME="root" -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql:3306/foodorderDB?createDatabaseIfNotExist=true" -e SPRING_DATASOURCE_PASSWORD="admin" --network bankapp sidraut007/food-backend
+  docker run -d -p 8080:8080 --name backend -e SPRING_DATASOURCE_USERNAME="root" -e SPRING_DATASOURCE_URL="jdbc:mysql://mysql:3306/foodorderDB?createDatabaseIfNotExist=true" -e SPRING_DATASOURCE_PASSWORD="admin" --network foodapp sidraut007/food-backend
   ```
   #
   - Verify deployment
