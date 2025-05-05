@@ -3,7 +3,7 @@
 - This is a multi-tier Food-App application written in Java (Springboot).
 
 ![Login diagram](images/login.png)
-![Transactions diagram](images/transactions.png)
+![Transactions diagram](images/active_order.png)
 
 ### PRE-REQUISITES FOR THIS PROJECT:
 - AWS Account
