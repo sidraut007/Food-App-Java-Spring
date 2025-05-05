@@ -53,7 +53,7 @@
   #
   - Run MYSQL container
   ```bash
-  docker run -itd --name mysql -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=FoodDB --network=foodapp mysql:5.7
+  docker run -itd --name mysql -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=foodorderDB --network=foodapp mysql:5.7
 
   ```
   #
