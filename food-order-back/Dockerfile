@@ -18,12 +18,13 @@ RUN mvn clean install -DskipTests=true
 # Import small size java image
 FROM openjdk:17-alpine as deployer
 
-WORKDIR /app
-
-COPY ./src/main/resources/import.sql /app/
+WORKDIR /src
 
 # Copy build from stage 1 (builder)
 COPY --from=builder /src/target/*.jar /src/target/bankapp.jar
+
+# Copy the import.sql file into the Docker image (you may need to place this in `src/main/resources`)
+COPY src/main/resources/import.sql /docker-entrypoint-initdb.d/
 
 # Expose application port 
 EXPOSE 8080
